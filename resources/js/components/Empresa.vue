@@ -452,7 +452,7 @@ export default {
                 {text: 'Titulo de Oferta', value: 'TituloOferta'},
                 {text: 'Descripcion', value: 'DescripcionOferta'},
                 {text: 'Estado', value: 'Estado'},
-                {text: 'Fecha Publicacion', value: 'FechaPubicacion'},
+                //{text: 'Fecha Publicacion', value: 'FechaPubicacion'},
                 {text: 'Detalles', value: 'actions'},
                 
                
@@ -467,8 +467,8 @@ export default {
                 Disponibilidad:'',
                 EducacionMinima:'',
                 Edad:'',
-                FechaPubicacion:'',
-                FechaPublicacionFin:'',
+                //FechaPubicacion:'',
+               // FechaPublicacionFin:'',
                 Requisitos:'',
                 Beneficios:'',
                 Cualidades:'',
@@ -562,9 +562,9 @@ export default {
                 //this.estudiante.NombreEmpresa = data.NombreEmpresa;
                 this.estudiante.TituloOferta = data.TituloOferta;
                 this.estudiante.Disponibilidad = data.Disponibilidad;
-                 this.estudiante.EducacionMinima = data.EducacionMinima;
-                 this.estudiante.Edad = data.Edad;
-                 this.estudiante.FechaPubicacion = data.FechaPubicacion;
+                this.estudiante.EducacionMinima = data.EducacionMinima;
+                this.estudiante.Edad = data.Edad;
+                //this.estudiante.FechaPubicacion = data.FechaPubicacion;
                 this.estudiante.DescripcionOferta = data.DescripcionOferta;
                 this.estudiante.LinkTest = data.LinkTest;
                 this.estudiante.FechaPublicacionFin = data.FechaPublicacionFin;
@@ -581,10 +581,10 @@ export default {
                 this.estudiante.Disponibilidad = '';
                 this.estudiante.EducacionMinima = '';
                 this.estudiante.Edad = '';
-                this.estudiante.FechaPubicacion = '';
+                //this.estudiante.FechaPubicacion = '';
                 this.estudiante.DescripcionOferta = '';
                 this.estudiante.LinkTest = '';
-                this.estudiante.FechaPublicacionFin = '';
+                //this.estudiante.FechaPublicacionFin = '';
                 this.estudiante.Requisitos = '';
                 this.estudiante.Beneficios = '';
                 this.estudiante.Cualidades = '';
