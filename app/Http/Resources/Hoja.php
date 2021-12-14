@@ -69,7 +69,7 @@ class Hoja extends JsonResource
             'OCUPACIONB'=> $this->OCUPACIONB,
            //'CODUSUARIO'=> $this->CODUSUARIO,
 
-           'CODUSUARIO'=> User::find($this->CODUSUARIO),
+           'CODUSUARIO'=> $this->CODUSUARIO,
            
             
         ];

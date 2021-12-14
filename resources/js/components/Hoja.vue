@@ -786,7 +786,7 @@ export default {
                 NOMBREB:'',
                 TELEFONORB:'',
                 OCUPACIONB:'',
-                CODUSUARIO:'',
+                //CODUSUARIO:'',
                 
                 
                 
