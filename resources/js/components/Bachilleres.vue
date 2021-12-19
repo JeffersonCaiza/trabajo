@@ -541,7 +541,7 @@
                          class="alert"
                          transition="scale-transition"
                 >
-                    Recuerda solo puedes postularte una vez a una oferta
+                    Ya estas postulado a esta oferta!
                 </v-alert>
 
 

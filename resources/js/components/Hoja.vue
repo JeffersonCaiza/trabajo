@@ -6,7 +6,7 @@
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
                 
-                
+                <div v-if="condicion">
                  <v-btn @click="update=false; openModal();" class="btn-blue">
                     <v-icon
                         small
@@ -16,7 +16,11 @@
                     </v-icon>
                     Crea tu hoja de vida
                 </v-btn>
-               
+                </div>
+
+             
+                   
+
 
                 
                 
@@ -804,6 +808,10 @@ export default {
             ofertasos: [],
             borrar: true,
             lista_noveles:[],
+
+            condicion:true,
+
+            
             
            
         }
@@ -843,6 +851,7 @@ export default {
             axios.get(`hoja`).then(res => {
                 this.est = res.data;
                this.estudiantes = this.est.data;
+               this.condicion=false;
           //      this.totalPages = this.est.meta.last_page;
           //      this.perPage = this.est.meta.per_page;
             });
@@ -864,6 +873,7 @@ export default {
                     const res = await axios.post('hojavida', this.estudiante);
 
                     this.success = true;
+                   
                     
                    
                 }
