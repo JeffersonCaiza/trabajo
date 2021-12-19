@@ -614,6 +614,9 @@
                                             </div>
                                         </div>
 
+                                        
+                                            
+
                                          <v-alert v-if="success===true"
                          id="alertSuccess"
                          name="alertSuccess"
@@ -701,8 +704,9 @@
                     <v-btn
                         small
                         class="mr-2"
-                        @click="update = true; openModal(item);"
+                        @click="update = true; openModal(item); condicion=false"
                         style="background-color: #38c172"
+                       
                     >
                         <v-icon
                             small
@@ -851,7 +855,7 @@ export default {
             axios.get(`hoja`).then(res => {
                 this.est = res.data;
                this.estudiantes = this.est.data;
-               this.condicion=false;
+               
           //      this.totalPages = this.est.meta.last_page;
           //      this.perPage = this.est.meta.per_page;
             });
@@ -869,16 +873,20 @@ export default {
                 if (this.update) {
                     const res = await axios.put('hoja/' + this.id, this.estudiante);
                     this.closeModal();
+                    this.condicion=false;
                 } else {
                     const res = await axios.post('hojavida', this.estudiante);
 
                     this.success = true;
+                    this.condicion=false;
+                    
                    
                     
                    
                 }
                 //this.closeModal();
                 this.list();
+                
 
             } catch (error) {
                 if (error.response.data) {

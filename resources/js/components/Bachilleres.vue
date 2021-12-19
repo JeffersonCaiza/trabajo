@@ -482,7 +482,7 @@
 
 
 
-                                         <div class="row">
+                                        <div class="row">
                                             <label for="IDHOJA"
                                                    class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
                                             <div class="col-md-6">
@@ -513,6 +513,33 @@
                                                       v-if="errores.IDHOJA">{{ errores.IDHOJA[0] }}</span>
                                             </div>
                                         </div>
+
+
+                                         <!--<div class="row">
+                                            <label for="IDHOJA"
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
+                                            <div >
+                                                <input class="rad" :value="hojavida.IDHOJA"   type="radio" v-model="estudiante1.IDHOJA" 
+                                                       id="IDHOJA"
+                                                       
+
+                                                    >
+
+                                                       <option class="nombre"
+                                            v-for="hojavida in vida"
+                                            :value="hojavida.IDHOJA"
+                                          
+                                         
+                                           
+                                             
+                                           
+                                            >{{ hojavida.NOMBRESC }}</option>
+
+                                                       <span class="text-danger"
+                                                    v-if="errores.IDHOJA">{{ errores.IDHOJA[0] }}</span>
+                                               
+                                            </div>
+                                        </div>-->
 
 
 
@@ -1204,6 +1231,18 @@ select {
     background-color:#00455E;
     color: rgb(0 0 6 / 104%);
 }
+
+.nombre{
+   margin-left: 34px;
+   margin-top: 4px;
+}
+
+.rad{
+       margin-left: 14px;
+    position: absolute;
+    margin-top: 14px;
+}
+
 
 
 
