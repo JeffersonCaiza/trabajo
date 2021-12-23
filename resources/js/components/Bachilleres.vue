@@ -484,7 +484,7 @@
 
                                         <div class="row">
                                             <label for="IDHOJA"
-                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre</strong></label>
+                                                   class="col-md-4 col-form-label text-md-right"><strong>Nombre Postulante</strong></label>
                                             <div class="col-md-6">
                                                 
 
@@ -497,10 +497,11 @@
                                                 
                                               
                                         >
-                                          
+                                            <option  value="" disabled selected> Ingresa tu nombre</option>
                                             <option 
                                             v-for="hojavida in vida"
-                                            :value="hojavida.IDHOJA"
+                                            v-bind:value="hojavida.IDHOJA"
+                                            :selected="hojavida.IDHOJA"
                                           
                                          
                                            
@@ -749,11 +750,19 @@ export default {
                 Cualidades:'',
                 CODUSUARIO:'',
                 Estado:'',
-                
-                
-               
                 },
+
+
+             
+
+
+
+
+
+
             id: 0,
+
+           
             
             update: true,
             modal: 0,
@@ -778,11 +787,8 @@ export default {
             show1: false,
             update1: true,
             ofertasos:[],
-            vida:[
-               
-            
-                
-            ],
+            vida:[],
+           
             success: false,
            
         }
@@ -802,6 +808,8 @@ export default {
           axios.get('ofertasos').then((response) => {
             this.ofertasos = response.data;
         })
+
+        
 
         axios.get('hojas').then((response) => {
             this.vida = response.data;
@@ -824,9 +832,9 @@ export default {
 
         },
 
-       // hojitas(){axios.get('hojas').then(res => {
-         //   this.esta = res.data;
-           // this.vida = this.esta.data;
+      // hojitas(){axios.get('hojas').then(res => {
+        //    this.esta = res.data;
+          // this.estudiante3 = this.esta.data;
            
         //})},
 
@@ -837,6 +845,8 @@ export default {
             try {
                 if (this.update) {
                     const res = await axios.put('ofertas/' + this.id, this.estudiante);
+
+                    
                 } else {
                     const res = await axios.post('ofertas', this.estudiante);
                 }
@@ -851,16 +861,29 @@ export default {
         },
 
 
+
+         
+        
+
+
+
+
+
+
         async save1() {
             try {
                 if (this.update1) {
                     const res = await axios.put('ofertas/' + this.id, this.estudiante1);
+
+                    
+
                 } else {
                     const res = await axios.post('postulaciones', this.estudiante1);
-                    //this.success = true;
+                    this.success = true;
+                    window.location.href = '/ofertas_laborales'
                     //this.closeModal1()
                 }
-                this.success = true;
+                //this.success = close;
                 //this.closeModal1();
                 //this.list();
 
@@ -948,7 +971,7 @@ export default {
                 
                 this.titleModal1 = "Postulacion";
                 this.estudiante1.IdOferta = data.IdOferta;
-                this.estudiante1.IDHOJA = data.IDHOJA;
+                this.estudiante1.IDHOJA = "";
                
             }
         },
@@ -1217,7 +1240,7 @@ a {
 
 select {
   word-wrap: normal;
-  background: #136fbb;
+  background: #d4e8f9;
   border-radius: 6px;
   -webkit-appearance: revert;
 }

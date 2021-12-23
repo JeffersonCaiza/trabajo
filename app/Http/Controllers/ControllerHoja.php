@@ -43,7 +43,7 @@ class ControllerHoja extends Controller
         //$hoja = Hoja::where('CODUSUARIO', '=', Auth::id() )->get();
         
         //return Hoja::all();
-        //return new HojaCollection($hoja);
+       // return new HojaCollection($hoja);
 
         
         //$ofertaso = DB::table('ofertas')->where('CODUSUARIO', '=', Auth::id() )->get();
