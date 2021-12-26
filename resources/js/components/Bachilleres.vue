@@ -1,6 +1,20 @@
 <template>
     <div>
+       
         <h1 class="text-center"><strong>Lista de ofertas</strong></h1>
+                <v-alert
+                         id="alertSuccess"
+                         name="alertSuccess"
+                         dismissible
+                         type="success"
+                         class="alert"
+                         transition="scale-transition"
+                >
+                    Si ingresas al sistema por primera vez crea tu hoja de vida primero
+                </v-alert>
+
+
+
         <div class="row" style="margin: 10px 0">
             <div style="display: flex; justify-content: flex-end;" class="">
         </div>
@@ -753,6 +767,8 @@ export default {
                 },
 
 
+                
+
              
 
 
@@ -893,6 +909,12 @@ export default {
                 }
             }
         },
+
+
+
+
+
+         
 
          
     
@@ -1264,6 +1286,11 @@ select {
        margin-left: 14px;
     position: absolute;
     margin-top: 14px;
+}
+
+.alert[data-v-2d54bac5] {
+   
+    margin-right: 434px;
 }
 
 

@@ -27,7 +27,11 @@
 
 </head>
 <body style="background-image: url('{{ asset('img/imagen.jpg') }}'); background-size: cover; background-position: top center;align-items: center;" data-color="purple">
-    
+ 
+   
+
+
+
 <div id="app">
     
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
@@ -84,6 +88,8 @@
             </div>
         </div>
     </nav>
+
+   
     
     <main class="py-3">
         @yield('content')
